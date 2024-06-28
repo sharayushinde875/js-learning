@@ -1,0 +1,35 @@
+function Bank(bankName,location,ifsccode,branchcode)
+{
+    this.bankName=bankName;
+    this.location=location;
+    this.ifsccode=ifsccode;
+    this.branchcode=branchcode;
+}
+
+const YesBank= new Bank("Yes Bank","Sangli","yes001",1234);
+console.log("Yes Bank details are:- ",YesBank.bankName,YesBank.location,YesBank.ifsccode,YesBank.branchcode);
+
+const SbiBank= new Bank("Sbi Bank","kolhapur","sbi001",2345);
+console.log("Sbi Bank details are:- ",SbiBank.bankName,SbiBank.location,SbiBank.ifsccode,SbiBank.branchcode);
+
+const mahBank= new Bank("mah Bank","satara","mah001",3456);
+console.log("Mah Bank details are:- ",mahBank.bankName,mahBank.location,mahBank.ifsccode,mahBank.branchcode);
+
+const AxisBank= new Bank("Axis Bank","pune","axis001",4567);
+console.log("Axis Bank details are:- ",AxisBank.bankName,AxisBank.location,AxisBank.ifsccode,AxisBank.branchcode);
+
+
+console.log("==================================================================================================");
+
+Bank.prototype.openTime="9 AM IST";
+Bank.prototype.closeTime="6 PM IST";
+
+console.log("Sbi Bank Open time is:-",Bank.prototype.openTime , "and Sbi Bank close time is:-",Bank.prototype.closeTime);
+
+console.log("==================================================================================================");
+
+console.log(" Bank Name is:-",AxisBank.bankName , "and Axis Bank close time is:-",Bank.prototype.closeTime);
+
+console.log("==================================================================================================");
+
+console.log(" Bank Name is:-",YesBank.bankName ," and branch code of Yes Bank:-",YesBank.branchcode, "and Yes Bank Open time is:-",Bank.prototype.openTime);
